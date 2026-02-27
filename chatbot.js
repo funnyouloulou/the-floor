@@ -3,6 +3,7 @@ import * as readline from "readline";
 
 const client = new Anthropic();
 const history = [];
+const systemPrompt = process.argv[2] ?? "You are a helpful assistant.";
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -19,7 +20,7 @@ async function chat(userMessage) {
   const stream = client.messages.stream({
     model: "claude-sonnet-4-6",
     max_tokens: 1024,
-    system: "You are a helpful assistant.",
+    system: systemPrompt,
     messages: history,
   });
 
