@@ -17,7 +17,11 @@ A simple terminal chatbot powered by the Anthropic Claude API.
 ## Usage
 
 ```bash
+# Use the default system prompt
 node chatbot.js
+
+# Use a custom system prompt
+node chatbot.js "You are a pirate."
 ```
 
 Type your messages and press Enter. Claude will respond with streaming output. Type `exit` to quit.
@@ -26,4 +30,4 @@ Type your messages and press Enter. Claude will respond with streaming output. T
 
 - Streaming responses
 - Conversation history (Claude remembers previous messages)
-- System prompt: "You are a helpful assistant."
+- Configurable system prompt via CLI argument (default: "You are a helpful assistant.")
