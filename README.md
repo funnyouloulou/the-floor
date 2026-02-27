@@ -17,6 +17,9 @@ A simple terminal chatbot powered by the Anthropic Claude API.
 ## Usage
 
 ```bash
+# Show help
+node chatbot.js --help
+
 # Use the default system prompt
 node chatbot.js
 
