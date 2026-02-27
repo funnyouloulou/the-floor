@@ -1,6 +1,23 @@
 import Anthropic from "@anthropic-ai/sdk";
 import * as readline from "readline";
 
+if (process.argv[2] === "--help") {
+  console.log(`Usage: node chatbot.js [system_prompt]
+
+Options:
+  --help          Show this help message
+
+Arguments:
+  system_prompt   Optional system prompt for the assistant
+                  (default: "You are a helpful assistant.")
+
+Examples:
+  node chatbot.js
+  node chatbot.js "You are a pirate."
+`);
+  process.exit(0);
+}
+
 const client = new Anthropic();
 const history = [];
 const systemPrompt = process.argv[2] ?? "You are a helpful assistant.";
