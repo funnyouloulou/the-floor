@@ -26,3 +26,4 @@ Type your messages and press Enter. Claude will respond with streaming output. T
 
 - Streaming responses
 - Conversation history (Claude remembers previous messages)
+- System prompt: "You are a helpful assistant."
